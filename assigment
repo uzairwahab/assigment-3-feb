@@ -1,0 +1,83 @@
+
+Q1. Which keyword is used to create a function? Create a function to return a list of odd numbers in the
+range of 1 to 25.
+
+Ans. The keyword used to create a function in Python is "def".
+
+def odd_numbers_1_to_25():
+    odd_numbers = []
+    for number in range(1, 26):
+        if number % 2 != 0:
+            odd_numbers.append(number)
+    return odd_numbers
+
+print(odd_numbers_1_to_25())
+
+
+Q2. Why *args and **kwargs is used in some functions? Create a function each for *args and **kwargs
+to demonstrate their use.
+Ans. We use *args and **kwargs as an argument when we are unsure about the number of arguments to pass in the functions.
+1. args besically use for tupels
+   def use_args(*args):
+        return args
+     use_args(1,2,3,45,6)
+     output=(1,2,3,45,6)
+      use_args('sudh','uzair',1,2,3,4,4, [1,45,22,4,5])
+2. kwargs is use for dict
+   def use_kwargs(**kwargs):
+     return kwargs
+
+use_kwargs( c= 'uzair' , d = 'choudhary', a= [1,2,3,4] , b= 12)
+  output = {'c': 'uzair', 'd': 'choudhary', 'a': [1, 2, 3, 4], 'b': 12}
+ 
+ Q3. What is an iterator in python? Name the method used to initialise the iterator object and the method
+used for iteration. Use these methods to print the first five elements of the given list [2, 4, 6, 8, 10, 12, 14,
+16, 18, 20].
+Ans. An iterator in Python is an object that implements the iterator protocol, which consists of two methods: __iter__ and __next__. The __iter__ method is used to initialize the iterator object, and the __next__ method is used for iteration.
+
+     my_list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+     my_iter = iter(my_list)
+        for i in range(5):
+           print(next(my_iter))
+Q4. What is a generator function in python? Why yield keyword is used? Give an example of a generator
+    function.
+Ans. A generator function is a special type of function that returns an iterator, allowing the caller to iterate over a series of values produced by the function.
+     The yield keyword is used to produce a value and temporarily suspend the function's execution, so that the next value can be produced when the function is resumed.
+
+   def squares(numbers):
+       for number in numbers:
+           yield number ** 2
+
+    numbers = [1, 2, 3, 4, 5]
+      for square in squares(numbers):
+          print(square)
+Q5. Create a generator function for prime numbers less than 1000. Use the next() method to print the
+first 20 prime numbers.    
+
+
+
+Q6. Write a python program to print the first 10 Fibonacci numbers using a while loop.
+ANS
+a = 0
+b = 1
+counter = 0
+while  counter < 10:
+    print(a)
+    c = a+b
+    a= b
+    b = c
+    counter = counter+1
+ Q7. Write a List Comprehension to iterate through the given string: ‘pwskills’.
+Expected output: ['p', 'w', 's', 'k', 'i', 'l', 'l', 's']  
+ANS. s = 'pwskills'
+
+[char for char in s]
+['p', 'w', 's', 'k', 'i', 'l', 'l', 's']
+Q9. Write a code to print odd numbers from 1 to 100 using list comprehension.
+ANS. l = list(range(1,100))
+     [i  for i in l if i %2 ==0  ]
+
+    
+
+     
